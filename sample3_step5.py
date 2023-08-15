@@ -7,20 +7,20 @@ import tkinter as tk
 
 
 def switch():
-    global on_play
-    if on_play:
-        on_play = False
+    global is_play
+    if is_play:
+        is_play = False
     else:
-        on_play = True
+        is_play = True
 
 
 def update(f):
-    if on_play:
+    if is_play:
         y1 = np.sin(x - f)
         sine_curve.set_ydata(y1)
 
 
-on_play = False
+is_play = False
 
 fig = Figure()
 ax1 = fig.add_subplot(111)
